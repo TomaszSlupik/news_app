@@ -1,0 +1,33 @@
+[
+    {
+        "id" :0,
+        "country":  "Argentyna",
+        "lp": "ar",
+        "flag": "/img/assets/argentina.png"
+
+    },
+    {
+        "id": 1, 
+        "country":  "Brazylia",
+        "lp": "br",
+        "flag": "/img/assets/brazil.png"
+    },
+    {
+        "id": 2, 
+        "country":  "Kanada",
+        "lp": "ca",
+        "flag": "/img/assets/canada.png"
+    },
+    {
+        "id": 3, 
+        "country":  "Niemcy",
+        "lp": "de",
+        "flag": "/img/assets/germany.png"
+
+    }
+]
+   
+    
+    
+    
+   
