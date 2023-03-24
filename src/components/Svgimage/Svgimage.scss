@@ -1,0 +1,72 @@
+.svgimage {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    &__box {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-picture {
+            width: 500px;
+            height: 800px;
+            &--text {
+                position: absolute;
+                color: #fff;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.5rem;
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                z-index: 3;
+                
+            }
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .svgimage {
+        &__box {
+            &-picture {
+                width: 700px;
+                height: 800px;
+                &--text {
+                    
+                    font-size: 2.2rem;
+                }
+               
+            }
+        }
+       }
+}
+
+@media only screen and (min-width: 768px) {
+    .svgimage {
+        &__box {
+            &-picture {
+                width: 800px;
+                height: 800px;
+            }
+        }
+       }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .svgimage {
+        &__box {
+            &-picture {
+                width: 900px;
+                height: 900px;
+            }
+        }
+       }
+}
+
+

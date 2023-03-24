@@ -23,7 +23,12 @@
         "country":  "Niemcy",
         "lp": "de",
         "flag": "/img/assets/germany.png"
-
+    }, 
+    {
+        "id": 4, 
+        "country":  "Polska",
+        "lp": "pl",
+        "flag": "/img/assets/poland.png"
     }
 ]
    

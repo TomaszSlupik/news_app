@@ -1,0 +1,23 @@
+.footer {
+    position: relative;
+    bottom: 0%;
+    width: 100vw;
+    height: 110px;
+    background-color: #064e58;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__time {
+        position: relative;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.2rem;
+        font-family: "Dancing Script", cursive;
+        font-weight: 500;
+        color: #fff;
+    }
+}

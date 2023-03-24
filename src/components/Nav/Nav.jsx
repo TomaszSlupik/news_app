@@ -11,9 +11,10 @@ import Country from '../../data/country.json'
 import Flag from '../../styles/Flag';
 import { ThemeProvider } from '@emotion/react';
 import theme from '../../theme/breakpoints';
+import { Link } from 'react-router-dom';
 
 
-export default function Nav() {
+export default function Nav(props) {
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -38,8 +39,8 @@ export default function Nav() {
   ]
 
   const style ={
-    burger: {cursor: 'pointer', fontSize: '5rem', color: '#064e58', position: 'fixed', right: '2%', zIndex: 30}, 
-    link: {textDecoration: 'none', color: '#7c5fe9', textAlign: 'center'},
+    burger: {cursor: 'pointer', fontSize: '5rem', color: '#064e58', position: 'fixed', right: '2%', top: '0%', zIndex: 30}, 
+    link: {textDecoration: 'none', color: '#064e58', textAlign: 'center'},
     flag: {width: '100%', height: '100%'}
   }
 
@@ -67,6 +68,11 @@ export default function Nav() {
     setState({ ...state, [anchor]: open });
   };
 
+  const clickCountryDetails = (nameCountry, id) => {
+    props.clickCountry(nameCountry, id)
+  }
+
+
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250}}
@@ -86,23 +92,16 @@ export default function Nav() {
                         <img className="box__country-img" src={process.env.PUBLIC_URL + el.flag} alt={el.country} style={style.flag}/>
                         </Flag>
                         <div>
-                            {el.country}
+                            <Link 
+                            onClick={() => clickCountryDetails (el.country, el.lp)}
+                            to={`/country/[${el.country}]`} style={style.link}>
+                                {el.country}
+                            </Link>
                         </div>
                     </div>
                 </div>
                
                 </ThemeProvider>
-                
-            
-            
-            {/* <Link to={text.hrefLink}  style={style.link}>{text.nameLink} */}
-            {/* <ListItemButton>
-              <ListItemIcon style={style.burger}>
-                
-              </ListItemIcon>
-              <ListItemText />
-            </ListItemButton> */}
-            {/* </Link> */}
             </Navigation>
           </ListItem>
         ))}
