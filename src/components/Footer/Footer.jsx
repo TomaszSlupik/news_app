@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './Footer.scss'
 import ArticleIcon from '@mui/icons-material/Article';
 import Badge from '@mui/material/Badge';
+import { FormattedMessage } from 'react-intl';
 
-export default function Footer() {
+export default function Footer(props) {
 
 const [hours, setHours] = useState(0);
 const [minutes, setMinutes] = useState(0);
@@ -30,8 +31,10 @@ useEffect(() => {
   return (
     <div className='footer'>
         <div className="footer__countnews">
-            Liczba artykułów
-        <Badge badgeContent={4} color="primary">
+            <div className="footer__countnews-number">
+            <FormattedMessage id="numberOfArticles" defaultMessage="Liczba artykułów" />
+            </div>
+        <Badge badgeContent={props.newsLengthDetails} color="primary">
             <ArticleIcon style={{color: '#fff'}} />
         </Badge>
         </div>

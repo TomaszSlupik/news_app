@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1em;
     &__time {
         position: relative;
         height: 70px;
@@ -19,5 +20,15 @@
         font-family: "Dancing Script", cursive;
         font-weight: 500;
         color: #fff;
+    }
+    &__countnews {
+        display: flex;
+        flex-direction: row;
+        color: #fff;
+        font-size: 1.5rem;
+        margin-top: 0.8em;
+        &-number {
+            margin-right: 0.2em;
+        }
     }
 }

@@ -9,6 +9,7 @@ import { TransitionProps } from '@mui/material/transitions';
 import Button from '@mui/material/Button';
 import { ThemeProvider } from '@emotion/react';
 import themeColor from '../../theme/themeColor';
+import { FormattedMessage } from 'react-intl';
 
 const Transition = React.forwardRef(function Transition(
     props: TransitionProps & {
@@ -29,18 +30,20 @@ export default function Infouser(props) {
         onClose={props.closeWindowforUser}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{"Największa trudność"}</DialogTitle>
+        <DialogTitle>{<FormattedMessage id="myOpinion" defaultMessage="Moja opinia" />}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
+            <div>Największa trudność:</div>
+            <div>Największa frajda:</div>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
         <ThemeProvider theme={themeColor}>
         <Button 
           variant='contained'
-          onClick={props.closeWindowforUser}>Zamknij</Button>
+          onClick={props.closeWindowforUser}>
+            <FormattedMessage id="close" defaultMessage="Zamknij" />
+          </Button>
         </ThemeProvider>
         </DialogActions>
       </Dialog>

@@ -64,9 +64,23 @@
             &-picture {
                 width: 900px;
                 height: 900px;
+                &--text {
+                    width: 700px;
+                }
             }
         }
        }
 }
 
+
+@media only screen and (min-width: 1400px) {
+    .svgimage {
+        &__box {
+            &-picture {
+                width: 1350px;
+                height: 1350px;
+            }
+        }
+       }
+}
 

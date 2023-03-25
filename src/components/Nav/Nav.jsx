@@ -22,22 +22,6 @@ export default function Nav(props) {
     right: false,
   });
 
-  const linkNav = [
-    {
-      nameLink:'Home',
-      hrefLink: '/'
-    },
-    {
-      nameLink:'Wyniki',
-      hrefLink: '/results'
-  },
-    {
-        nameLink:'Wyjazdy',
-        hrefLink: '/trips'
-    },
-
-  ]
-
   const style ={
     burger: {cursor: 'pointer', fontSize: '5rem', color: '#064e58', position: 'fixed', right: '2%', top: '0%', zIndex: 30}, 
     link: {textDecoration: 'none', color: '#064e58', textAlign: 'center'},
@@ -73,7 +57,9 @@ export default function Nav(props) {
   }
 
 
+  
   const list = (anchor) => (
+   
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250}}
       role="presentation"

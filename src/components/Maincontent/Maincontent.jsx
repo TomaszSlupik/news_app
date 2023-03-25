@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import axios from 'axios'
 import { useState, useEffect} from 'react'
 import mykey from '../../api/mykey'
-import Country from '../../data/country.json'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -16,7 +15,25 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import themeColor from '../../theme/themeColor'
+import Button from '@mui/material/Button';
+import { TransitionProps } from '@mui/material/transitions';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+import { FormattedMessage } from 'react-intl';
 
+
+const Transition = React.forwardRef(function Transition(
+  props: TransitionProps & {
+    children: React.ReactElement<any, any>;
+  },
+  ref: React.Ref<unknown>,
+) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 export default function Maincontent(props) {
 
@@ -32,19 +49,47 @@ useEffect(() => {
 }, [props.detailId])
 
 
+
 useEffect (()=> {
     const getNews = async () => {
         const {data: res} = await axios.get(api)
-        setNews(res.articles)
-        
+        setNews(res.articles) 
     }
     getNews()
 }, [id])
 
 
+// Zliczanie wszystkich artykułów
+const countListMeal = (news) => {
+  for (let i = 0; i < news.length; i++) {}
+  return news
+}
+
+const count = useMemo(() => {
+  return  countListMeal (news.length)
+}, [news.length])
+
+props.newsLength(count)
+
+
+const [openWindowInfo, setOpenWindowInfo] = useState(false)
+const [author, setAuthor] = useState("")
+const [url, setUrl] = useState()
+const [description, setDescription] = useState()
+
+const openDetailNewsArticle = (author, url, description) => {
+  setAuthor(author)
+  setUrl(url)
+  setDescription(description)
+  setOpenWindowInfo(true)
+}
+
+const closeDetailNewsArticle = () => {
+  setOpenWindowInfo(false)
+}
 
   return (
-    <div>
+    <div style={{marginTop: '2em'}}>
       {
         props.listView === true ?
         (
@@ -54,7 +99,9 @@ useEffect (()=> {
                   <List
                   key={index}
                   sx={{ width: '100%', bgcolor: 'background.paper' }}  component="nav" aria-label="mailbox folders">
-                  <ListItem button style={{display: 'flex', flexDirection: 'column', alignItems: 'baseline', height: '100%', paddingTop: '8px',
+                  <ListItem 
+                  onClick={() => openDetailNewsArticle(el.author, el.url, el.description)}
+                  button style={{display: 'flex', flexDirection: 'column', alignItems: 'baseline', height: '100%', paddingTop: '8px',
                     paddingBottom: '8px'}}>
                     <ListItemText primary={el.title}
                     style={{fontWeight: '700', fontFamily: 'Open Sans', color: "#064e58" }}
@@ -71,7 +118,7 @@ useEffect (()=> {
         )
         :
         (
-          <div>
+          <div style={{marginTop: '2em'}}>
           <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 1, md: 2 }} > 
               <ThemeProvider theme={theme, themeColor}>
@@ -93,6 +140,11 @@ useEffect (()=> {
                           </CardContent>
                           <div>{el.publishedAt}</div>
                           <div>{el.source.name}</div>
+                          <Button 
+                          onClick={() => openDetailNewsArticle(el.author, el.url, el.description)}
+                          style={{cursor: 'pointer', position: 'absolute', right: '2%', bottom: '3%'}} variant='contained'>
+                            <FormattedMessage id="look" defaultMessage="Zobacz" />
+                          </Button>
                           </Card>
                         </Cardnews>
                         </Grid>
@@ -107,7 +159,42 @@ useEffect (()=> {
         )
       }
 
-
+            <Dialog
+                        open={openWindowInfo}
+                        TransitionComponent={Transition}
+                        keepMounted
+                        onClose={closeDetailNewsArticle}
+                        aria-describedby="alert-dialog-slide-description"
+                      >
+                        <DialogTitle style={{color: '#064e58'}}>{author}</DialogTitle>
+                        <DialogContent>
+                          <DialogContentText id="alert-dialog-slide-description">
+                            
+                            {url}
+                            {description === null ?
+                            (
+                              <div>
+                                <FormattedMessage id="noDescription" defaultMessage="Brak opisu" />
+                              </div>
+                            )
+                            :
+                            (
+                              description
+                            )
+                          }
+                          </DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                        <ThemeProvider theme={themeColor}>
+                        <Button 
+                          variant='outlined'
+                          onClick={closeDetailNewsArticle}>
+                             <FormattedMessage id="close" defaultMessage="Zamknij" />
+                          </Button>
+                        </ThemeProvider>
+                        </DialogActions>
+                </Dialog>
+  
     </div>
   )
 }
