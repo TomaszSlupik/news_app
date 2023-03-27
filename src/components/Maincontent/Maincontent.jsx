@@ -24,6 +24,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { FormattedMessage } from 'react-intl';
+import './Maincontent.scss'
 
 
 const Transition = React.forwardRef(function Transition(
@@ -118,7 +119,7 @@ const closeDetailNewsArticle = () => {
         )
         :
         (
-          <div style={{marginTop: '2em'}}>
+          <div className='titles'>
           <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 1, md: 2 }} > 
               <ThemeProvider theme={theme, themeColor}>
@@ -130,6 +131,12 @@ const closeDetailNewsArticle = () => {
                           item xs={12} sm={12} lg={4} style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '0em'}}>
                           <Cardnews>
                           <Card style={{ position: 'relative', width: '100%', minHeight: '200px' }}>
+                            {
+                              el.urlToImage !== null ?
+                              <img className='titles__img' src="" alt={el.title} />
+                              :
+                              <div></div>
+                            }
                           <CardContent>
                             <Typography 
                             style={{fontWeight: '700', fontFamily: 'Open Sans'}}
@@ -138,8 +145,8 @@ const closeDetailNewsArticle = () => {
                               {el.title}
                             </Typography>
                           </CardContent>
-                          <div>{el.publishedAt}</div>
-                          <div>{el.source.name}</div>
+                          <div className='titles__publishedAt'>{el.publishedAt}</div>
+                          <div className='titles__sourceName'>{el.source.name}</div>
                           <Button 
                           onClick={() => openDetailNewsArticle(el.author, el.url, el.description)}
                           style={{cursor: 'pointer', position: 'absolute', right: '2%', bottom: '3%'}} variant='contained'>
@@ -173,8 +180,8 @@ const closeDetailNewsArticle = () => {
                             {url}
                             {description === null ?
                             (
-                              <div>
-                                <FormattedMessage id="noDescription" defaultMessage="Brak opisu" />
+                              <div className='describe'>
+                                <FormattedMessage className='describe' id="noDescription" defaultMessage="Brak opisu" />
                               </div>
                             )
                             :

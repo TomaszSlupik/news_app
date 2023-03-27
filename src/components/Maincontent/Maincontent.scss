@@ -1,0 +1,18 @@
+.titles {
+    margin-top: 2em;
+    &__publishedAt, &__sourceName  {
+        margin-left: 1em;
+    }
+    &__sourceName {
+        font-weight: 500;
+    }
+    &__img {
+        width: 100%;
+        min-height: 100px;
+    }
+    
+}
+
+.describe {
+    font-weight: 700;
+}

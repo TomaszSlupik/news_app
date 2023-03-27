@@ -12,6 +12,7 @@ import Flag from '../../styles/Flag';
 import { ThemeProvider } from '@emotion/react';
 import theme from '../../theme/breakpoints';
 import { Link } from 'react-router-dom';
+import MyLink from '../../styles/Mylink';
 
 
 export default function Nav(props) {
@@ -78,11 +79,13 @@ export default function Nav(props) {
                         <img className="box__country-img" src={process.env.PUBLIC_URL + el.flag} alt={el.country} style={style.flag}/>
                         </Flag>
                         <div>
+                            <MyLink>
                             <Link 
                             onClick={() => clickCountryDetails (el.country, el.lp)}
                             to={`/country/[${el.country}]`} style={style.link}>
                                 {el.country}
                             </Link>
+                            </MyLink>
                         </div>
                     </div>
                 </div>

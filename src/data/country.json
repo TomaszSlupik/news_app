@@ -26,9 +26,27 @@
     }, 
     {
         "id": 4, 
+        "country":  "Norwegia",
+        "lp": "no",
+        "flag": "/img/assets/norway.png"
+    }, 
+    {
+        "id": 5, 
         "country":  "Polska",
         "lp": "pl",
         "flag": "/img/assets/poland.png"
+    },
+    {
+        "id": 6, 
+        "country":  "Szwajcaria",
+        "lp": "ch",
+        "flag": "/img/assets/switzerland.png"
+    },
+    {
+        "id": 7, 
+        "country":  "Włochy",
+        "lp": "it",
+        "flag": "/img/assets/italy.png"
     }
 ]
    
