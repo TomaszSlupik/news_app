@@ -121,18 +121,18 @@ const handleClickCloseLangDE = () => {
                     }}
                 >
                      <MenuItem onClick={handleClickCloseLangPL}>
-                    <img src={process.env.PUBLIC_URL + 'news_app/img/assets/poland.png'} className="header__box-flag" alt="Flaga polski" />
+                    <img src={process.env.PUBLIC_URL + '/img/assets/poland.png'} className="header__box-flag" alt="Flaga polski" />
                         PL
                     </MenuItem>
                     <MenuItem onClick={handleClickCloseLangEN}>
-                    <img src={process.env.PUBLIC_URL + 'news_app/img/assets/unitedkingdom.png'} className="header__box-flag" alt="Flaga UK" />
+                    <img src={process.env.PUBLIC_URL + '/img/assets/unitedkingdom.png'} className="header__box-flag" alt="Flaga UK" />
                         EN
                     </MenuItem>
                     <MenuItem onClick={handleClickCloseLangFR}>
-                    <img src={process.env.PUBLIC_URL + 'news_app/img/assets/france.png'} className="header__box-flag" alt="Flaga francji" />
+                    <img src={process.env.PUBLIC_URL + '/img/assets/france.png'} className="header__box-flag" alt="Flaga francji" />
                         FR</MenuItem>
                         <MenuItem onClick={handleClickCloseLangDE}>
-                    <img src={process.env.PUBLIC_URL + 'news_app/img/assets/germany.png'} className="header__box-flag" alt="Flaga niemiec" />
+                    <img src={process.env.PUBLIC_URL + '/img/assets/germany.png'} className="header__box-flag" alt="Flaga niemiec" />
                         DE</MenuItem>
       </Menu>
             </Circle>

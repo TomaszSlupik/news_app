@@ -10,43 +10,43 @@
         "id": 1, 
         "country":  "Brazylia",
         "lp": "br",
-        "flag": "news_app/img/assets/brazil.png"
+        "flag": "/img/assets/brazil.png"
     },
     {
         "id": 2, 
         "country":  "Kanada",
         "lp": "ca",
-        "flag": "news_app/img/assets/canada.png"
+        "flag": "/img/assets/canada.png"
     },
     {
         "id": 3, 
         "country":  "Niemcy",
         "lp": "de",
-        "flag": "news_app/img/assets/germany.png"
+        "flag": "/img/assets/germany.png"
     }, 
     {
         "id": 4, 
         "country":  "Norwegia",
         "lp": "no",
-        "flag": "news_app/img/assets/norway.png"
+        "flag": "/img/assets/norway.png"
     }, 
     {
         "id": 5, 
         "country":  "Polska",
         "lp": "pl",
-        "flag": "news_app/img/assets/poland.png"
+        "flag": "/img/assets/poland.png"
     },
     {
         "id": 6, 
         "country":  "Szwajcaria",
         "lp": "ch",
-        "flag": "news_app/img/assets/switzerland.png"
+        "flag": "/img/assets/switzerland.png"
     },
     {
         "id": 7, 
         "country":  "Włochy",
         "lp": "it",
-        "flag": "news_app/img/assets/italy.png"
+        "flag": "/img/assets/italy.png"
     }
 ]
    
