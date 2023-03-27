@@ -39,7 +39,7 @@ const changeView = () => {
 let navigate = useNavigate()
 
 const goToHome = () => {
-    navigate('/news_app')
+    navigate('/')
     window.location.reload(true)
 }
 

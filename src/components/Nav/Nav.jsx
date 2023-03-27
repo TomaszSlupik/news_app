@@ -82,7 +82,7 @@ export default function Nav(props) {
                             <MyLink>
                             <Link 
                             onClick={() => clickCountryDetails (el.country, el.lp)}
-                            to={`news_app/country/[${el.country}]`} style={style.link}>
+                            to={`/country/[${el.country}]`} style={style.link}>
                                 {el.country}
                             </Link>
                             </MyLink>

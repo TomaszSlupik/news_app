@@ -56,8 +56,8 @@ function App() {
           </Provider> */}
 
         <Routes>
-          <Route path='/news_app' element={<Svgimage />} />
-          <Route path={`/news_app/country/[${detailCountry}]`} element={< Maincontent
+          <Route path='/' element={<Svgimage />} />
+          <Route path={`/country/[${detailCountry}]`} element={< Maincontent
           listView={listView}
           detailId={detailId}
           detailCountry={detailCountry}

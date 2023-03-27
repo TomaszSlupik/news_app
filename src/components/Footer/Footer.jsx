@@ -16,7 +16,7 @@ const timer = () => {
     const measureTime = Date.parse(new Date());
     const seconds = Math.floor((measureTime/1000)%60);
     const minutes = Math.floor((measureTime/1000/60)%60);
-    const hours = Math.floor(measureTime/(1000*60*60) % 24 + 1);
+    const hours = Math.floor(measureTime/(1000*60*60) % 24 + 2);
 
     setHours(hours);
     setMinutes(minutes);
