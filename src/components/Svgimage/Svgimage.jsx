@@ -11,7 +11,7 @@ export default function Svgimage() {
             <div className="svgimage__box-picture--text">
               <FormattedMessage id="actualNews" defaultMessage="Aplikacja wyświetla aktualne Newsy pobierane z publicznego API." />
             </div>
-            <img className="svgimage__box-picture" src={process.env.PUBLIC_URL + '/img/svg/blob.svg'} alt="" />
+            <img className="svgimage__box-picture" src={process.env.PUBLIC_URL + 'news_app/img/svg/blob.svg'} alt="" />
             
         </div>
         </div>

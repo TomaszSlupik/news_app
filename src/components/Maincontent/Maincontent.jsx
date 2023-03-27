@@ -133,7 +133,7 @@ const closeDetailNewsArticle = () => {
                           <Card style={{ position: 'relative', width: '100%', minHeight: '200px' }}>
                             {
                               el.urlToImage !== null ?
-                              <img className='titles__img' src="" alt={el.title} />
+                              <img className='titles__img' src={el.urlToImage} alt={el.title} />
                               :
                               <div></div>
                             }

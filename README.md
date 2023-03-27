@@ -5,7 +5,7 @@
 
 Aplikacja dostępna jest pod linkiem:
 
-
+[News app](https://github.com/TomaszSlupik/news_app/)
 
 News app została utworzona pod Desktopy 💻
 oraz urządzenia mobilne 📱. 
