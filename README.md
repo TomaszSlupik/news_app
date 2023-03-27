@@ -3,7 +3,7 @@
 
 ## Online
 
-Aplikkacja dostępna jest pod linkiem:
+Aplikacja dostępna jest pod linkiem:
 
 
 

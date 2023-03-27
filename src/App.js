@@ -10,9 +10,9 @@ import translationsEN from './language/englishTranslation.json'
 import translationsPL from './language/polishTranslation.json'
 import translationsFR from './language/franchTranslation.json'
 import translationsDE from './language/germanyTranslation.json'
-import ViewTest from './components/ViewTest/ViewTest';
 import { Provider } from 'react-redux';
 import store from './store/configureStore'
+import ViewReducer from './components/ViewReducer/ViewReducer';
 
 function App() {
 
@@ -49,9 +49,12 @@ function App() {
           language={language}
           setLanguage={setLanguage}
           />
-          <Provider store={store}>
-              <ViewTest />
-          </Provider>
+
+          {/* Wyświetlenie Newsów za pomocą Reduxa */}
+          {/* <Provider store={store}>
+              <ViewReducer />
+          </Provider> */}
+
         <Routes>
           <Route path='/' element={<Svgimage />} />
           <Route path={`/country/[${detailCountry}]`} element={< Maincontent

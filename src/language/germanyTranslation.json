@@ -4,5 +4,7 @@
     "noDescription": "Keine Beschreibung",
     "look": "Suchen",
     "close": "Schließen",
-    "myOpinion" : "Meine meinung"
+    "myOpinion" : "Meine meinung",
+    "difficulty" : "Die größte Schwierigkeit: Redux, aber nach ein paar Versuchen habe ich es geschafft, Daten von der API herunterzuladen (auf 2 Arten gemacht: Redux und Axios)",
+    "fun": "Der größte Spaß: Für mich war der größte Spaß die Möglichkeit, eine originelle Anwendung zu erstellen, bei der ich mich beim Erstellen nicht langweilte und es möglich war, viele Funktionalitäten zu erstellen, z. Arbeiten mit dem Router und Ändern der Sprache."
 }

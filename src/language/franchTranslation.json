@@ -4,5 +4,7 @@
     "noDescription": "Pas de description",
     "look": "Regarder",
     "close": "Fermer",
-    "myOpinion" : "Mon avis"
+    "myOpinion" : "Mon avis",
+    "difficulty" : "La plus grosse difficulté : Redux, mais après quelques essais j'ai réussi à télécharger les données de l'API (réalisé de 2 manières : Redux et Axios)",
+    "fun": "Le plus grand plaisir : pour moi, le plus grand plaisir était l'opportunité de créer une application originale, où je ne me suis pas ennuyé en la créant et où il était possible de créer de nombreuses fonctionnalités, par exemple la possibilité de travailler avec des données réelles, deux interfaces utilisateur différentes, travailler avec le routeur et changer de langue."
 }

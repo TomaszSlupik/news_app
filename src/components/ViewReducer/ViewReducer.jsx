@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchNews } from '../../store/newSlice'
 
-export default function ViewTest() {
+export default function ViewReducer() {
 
 
 const dispatch = useDispatch();
@@ -19,14 +19,23 @@ useEffect(() => {
 
   return (
     <div style={{color: '#fff'}}>
-        testowanie
         {
-            articles.map((el) => (
-                <div key={el.title}>
-                    {el.title}
-                </div>
-            ))
+            newsStatus === 'succeeded' ?
+            (
+                articles.map((el) => (
+                    <div key={el.title}>
+                        {el.title}
+                    </div>
+                ))
+            ) :
+            newsStatus === 'failed' ?
+            (
+                <div>{error}</div>
+            )
+            :
+            <div></div>
         }
+       
     </div>
   )
 }

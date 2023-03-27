@@ -33,8 +33,8 @@ export default function Infouser(props) {
         <DialogTitle>{<FormattedMessage id="myOpinion" defaultMessage="Moja opinia" />}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            <div>Największa trudność:</div>
-            <div>Największa frajda:</div>
+            <div><FormattedMessage id="difficulty" defaultMessage="Największa trudność: Ustawienie Reduxa, jednak po kilku próbach udało się pobrać dane z API (zrobione na 2 sposoby: Redux i przez Axiosa)" /></div>
+            <div style={{marginTop: '0.4em'}}><FormattedMessage id="fun" defaultMessage="Najwieksza frajda: Dla mnie największą frajdą było możliwość stworzenia oryginalnej aplikacji, gdzie przy tworzeniu jej nie nudziłem się i można było stworzyć wiele funkcjonalności np. możliwość pracy na rzeczywistych danych, dwa różne interfejsy dla użytkownika, praca z Routerem oraz zmiana języków." /></div>
           </DialogContentText>
         </DialogContent>
         <DialogActions>

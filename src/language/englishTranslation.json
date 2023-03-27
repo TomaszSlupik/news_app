@@ -4,5 +4,7 @@
     "noDescription": "No description",
     "look": "Look",
     "close": "Close",
-    "myOpinion" : "My opinion"
+    "myOpinion" : "My opinion",
+    "difficulty" : "The biggest difficulty: Redux, but after a few tries I managed to download data from the API (done in 2 ways: Redux and Axios)",
+    "fun": "The greatest fun: For me, the greatest fun was the opportunity to create an original application, where I was not bored while creating it and it was possible to create many functionalities, e.g. the ability to work with real data, two different user interfaces, working with Router and changing languages."
 }

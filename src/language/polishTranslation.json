@@ -4,5 +4,7 @@
     "noDescription": "Brak opisu",
     "look": "Zobacz",
     "close": "Zamknij",
-    "myOpinion" : "Moja opinia"
+    "myOpinion" : "Moja opinia",
+    "difficulty" : "Największa trudność: Ustawienie Reduxa, jednak po kilku próbach udało się pobrać dane z API (zrobione na 2 sposoby: Redux i przez Axiosa)",
+    "fun": "Najwieksza frajda: Dla mnie największą frajdą było możliwość stworzenia oryginalnej aplikacji, gdzie przy tworzeniu jej nie nudziłem się i można było stworzyć wiele funkcjonalności np. możliwość pracy na rzeczywistych danych, dwa różne interfejsy dla użytkownika, praca z Routerem oraz zmiana języków."
 }
